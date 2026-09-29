@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Styled Button
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small React application that demonstrates a self-contained styled button. The
+page renders a centered heading and a button with inline styles and hover
+feedback. Clicking the button disables it and updates its appearance.
 
-## Available Scripts
+## Why this project is useful
 
-In the project directory, you can run:
+- Shows how to apply styles directly to React elements.
+- Demonstrates hover behavior with DOM event listeners.
+- Provides a minimal Create React App project for experimenting with React
+  components.
+- Includes a Jest and React Testing Library setup for adding component tests.
 
-### `npm start`
+## Getting started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js and npm
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the repository, move into the project directory, and install its locked
+dependencies:
 
-### `npm run build`
+```bash
+git clone https://github.com/VoidLance/course-files-javascript-react-styled-button.git
+cd course-files-javascript-react-styled-button
+npm ci
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Run the app
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+Open [http://localhost:3000](http://localhost:3000) in a browser. The page
+reloads automatically when source files change.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Use the component
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The example page renders `StyledButton` from
+[`src/StyledButton.js`](src/StyledButton.js):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```jsx
+import StyledButton from './StyledButton';
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+function App() {
+  return <StyledButton />;
+}
+```
 
-## Learn More
+The button starts enabled, changes color while hovered, and becomes disabled
+after it is clicked.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Test and build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run the test suite in watch mode:
 
-### Code Splitting
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Create an optimized production build in `build/`:
 
-### Analyzing the Bundle Size
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Project structure
 
-### Making a Progressive Web App
+```text
+src/
+├── App.js             # Application entry component
+├── StyledButton.js    # Styled button example
+├── App.css            # App-level styles
+└── App.test.js        # React Testing Library test
+public/                # Static assets and HTML template
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Getting help
 
-### Advanced Configuration
+For questions or reproducible bugs, [open an issue](../../issues/new) with
+details about your environment, the steps to reproduce the problem, and any
+relevant error output. For React and Create React App usage, see the
+[React documentation](https://react.dev/) and
+[Create React App documentation](https://create-react-app.dev/docs/getting-started/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contributing
 
-### Deployment
+Contributions are welcome. Before opening a pull request:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Create a focused branch from the current default branch.
+2. Make the smallest change that addresses the issue or improvement.
+3. Run `npm test` and `npm run build`.
+4. Explain the change and validation performed in the pull request.
 
-### `npm run build` fails to minify
+Please use the issue tracker for larger proposals so they can be discussed
+before implementation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Maintainer
+
+This project is maintained by [VoidLance](https://github.com/VoidLance).
+
+## License
+
+No license file is currently included. Contact the maintainer before
+redistributing or reusing the project.
